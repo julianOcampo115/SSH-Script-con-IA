@@ -63,3 +63,38 @@ El script mostrará una advertencia legal y solicitará confirmación antes de p
 
 ⚠️ **Este script debe ser utilizado únicamente con autorización expresa del propietario de los sistemas auditados.** El uso indebido podría ser ilegal y estar sujeto a sanciones.
 
+
+
+
+---
+
+## Ejemplo de Uso
+### Salida esperada:
+```
+✅ INICIANDO AUDITORIA SSH
+✅ Acceso exitoso: 192.168.1.1 - admin:1234
+✅ INICIANDO AUDITORIA TELNET
+🚀 Acceso exitoso en Telnet: 192.168.1.2 - root:admin
+```
+---
+
+## Alcance y Limitaciones
+### Limitaciones técnicas:
+- Puede consumir créditos de Shodan rápidamente.
+- IPs auditadas limitadas por `NUM_IPS_A_ESCANEAR`.
+
+### Consideraciones:
+- Se recomienda usar varias claves de API para evitar bloqueos.
+- Puede generar falsos positivos si los servidores cambian su configuración.
+
+
+### Posibles errores y soluciones
+| Error | Causa | Solución |
+|--------|------------|-------------|
+| `Error en Shodan` | API Key incorrecta | Verificar API Key |
+| `No se encontraron IPs` | No hay servidores vulnerables | Reintentar más tarde |
+| `Fallo de conexión` | Puerto bloqueado | Verificar conectividad |
+
+---
+
+

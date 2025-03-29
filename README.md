@@ -40,7 +40,7 @@ Este script permite realizar auditorías de seguridad en servidores SSH y Telnet
 Ejecutar el script con:
 
 ```sh
-python auditoria.py
+python SSH.py
 ```
 
 El script mostrará una advertencia legal y solicitará confirmación antes de proceder.

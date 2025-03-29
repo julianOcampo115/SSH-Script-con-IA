@@ -20,8 +20,8 @@ Este script permite realizar auditorías de seguridad en servidores SSH y Telnet
 1. Clonar el repositorio o descargar el script:
 
    ```sh
-   git clone https://github.com/tu-repo/auditoria-ssh-telnet.git
-   cd auditoria-ssh-telnet
+   git clone https://github.com/julianOcampo115/SSH-Script-con-IA.git
+   cd SSH-Script-con-IA
    ```
 
 2. Instalar las dependencias requeridas:

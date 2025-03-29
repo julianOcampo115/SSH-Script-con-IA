@@ -224,3 +224,7 @@ send_telegram_message(f"📊 *Resumen de auditoría TELNET*:\n🔹 Total intento
 - Envía un resumen de la auditoría a Telegram.
 
 ---
+## **EVIDENCIAS**
+
+![IDLE](idle.jpeg)
+![Telegram](telegram.jpeg)

@@ -26,9 +26,9 @@ NUM_IPS_A_ESCANEAR = 2  # Ajusta este número según lo que necesites
 
 
 # Configuración de API y credenciales
-API_KEY = "OscSR1MKM2fICcN5KgVBBJIGnXwrIt8z"
-TELEGRAM_BOT_TOKEN = "7720656194:AAGRh7hySVMNN36O2IcTl6cJa5vNa-0Sbws"
-TELEGRAM_CHAT_ID = "1574894198"
+API_KEY = "XXXXXXXXXXXXXX"
+TELEGRAM_BOT_TOKEN = "XXXXXXXXXXXXXX"
+TELEGRAM_CHAT_ID = "XXXXXXXXXXXXXX"
 
 if not API_KEY or not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
     print("❌ ERROR: Faltan variables de entorno para API Key o Telegram.")
